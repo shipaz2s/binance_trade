@@ -25,6 +25,7 @@ void binance_client::reply_time_manager(QNetworkReply* reply){
     QJsonDocument jsondoc = QJsonDocument::fromJson(data);
     if (!jsondoc.isNull()) {
         if (jsondoc.isObject()) {
+
             QJsonObject obj = jsondoc.object();
 
             qDebug() << obj["serverTime"].toString();
